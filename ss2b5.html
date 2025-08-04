@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class user {
+        constructor(name, phoneNumber, email) {
+            this.name = name;
+            this.phoneNumber = phoneNumber;
+            this.email = email;
+        }
+    }
+    const phoneBooks = [];
+    const addContact = (name, phone, email) => {
+        const newUser = new user(name,phone, email);
+        phoneBooks.push(newUser);
+    }
+    addContact("Nguyễn Văn A", "0123456789", "a@gmail.com");
+    addContact("Nguyễn Văn B", "0987654321", "b@gmail.com");
+
+    const displayContact = (phoneBooks)=> {
+        for (const user of phoneBooks) {
+            console.log(`Tên: ${user.name}
+Số điện thoại: ${user.phoneNumber}
+Email: ${user.email}`);
+        }
+    }
+    displayContact(phoneBooks);
+</script>
+</html>
